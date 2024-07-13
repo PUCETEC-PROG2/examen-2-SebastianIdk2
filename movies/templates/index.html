@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Multicines{% endblock title %}
+{% block content %}
+<p class="p-2">Bienvenido, a Multicines este es nuestro cat&aacute;logo</p>
+<ul class="list-group">
+    {% for movie in movies %}
+    <li class="list-group-item">
+    <p><a href="movie/{{movie.id}}">{{ movie | capfirst }}</a> - {{movie.year}}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}
